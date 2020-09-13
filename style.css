@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* home animation */
+.bgimg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+}
+
+.bgimg li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-animation: anime 40s linear 0s infinite;
+    animation: anime 40s linear 0s infinite;
+}
+
+.bgimg li:nth-child(1) {
+    background-image: url("../images/tenboutou.JPG");
+}
+.bgimg li:nth-child(2) {
+    background-image: url("../images/hotelshimoa.JPG");
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+.bgimg li:nth-child(3) {
+    background-image: url("../images/yuuhi.JPG");
+    -webkit-animation-delay: 20s;
+    animation-delay: 20s;
+}
+.bgimg li:nth-child(4) {
+    background-image: url("../images/rakori-na.JPG");
+    -webkit-animation-delay: 30s;
+    animation-delay: 30s;
+}
+
+@-webkit-keyframes anime {
+    0% {
+        -webkit-animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    10% {
+        -webkit-transform: scale(1.1);
+        opacity: 1;
+    }
+    40% {
+        -webkit-transform: scale(1.3);
+        -webkit-animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    50% {
+        -webkit-transform: scale(1.3);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes anime {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    10% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(1.2);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    width: 300px;
+    text-align: center;
+}
+
+p,
+a {
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+p {
+    color: #202020;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px #fff, -1px -1px 3px #fff;    
+}
+
+a {
+    color: #000;
+    background-color: rgba(255, 255, 255, .5);
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-left: 24px;
+    padding: 1em 8em;
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 480px) {
+    #logo img {
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #logo p {
+        margin-top: 0;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 1px 1px 3px #606060,
+                     -1px -1px 3px #606060;
+    }
+
+}
+
+/* EOF */
